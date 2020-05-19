@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="./jquery-3.5.1.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#fact").click(function () {
+        var n = parseInt($("#num").val());
+        var f = 1;
+        for (i = 1; i <= n; i++) {
+          f = f * i;
+        }
+        $("#result").val(f);
+      });
+    });
+  </script>
+
+  <body>
+    Number <input type="text" id="num" size="20" /> <br />
+    Result <input type="text" id="result" size="20" /><br />
+    <input type="button" id="fact" value="factorial" />
+  </body>
+</html>

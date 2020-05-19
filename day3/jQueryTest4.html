@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./jquery-3.5.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#para").click(function () {
+          $("p").hide();
+        });
+        $("#head1").click(function () {
+          $("#head1").css("color", "red");
+        });
+        $("#head2").click(function () {
+          $("#head2").css("color", "green");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="para">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error,
+      voluptatum?
+    </p>
+    <h1 id="head1">This is heading 1</h1>
+    <h2 id="head2">This is heading 2</h2>
+  </body>
+</html>

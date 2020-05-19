@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Day 2</title>
+</head>
+<body>
+	<div>
+		<label for="number">Enter a Number to get factorial</label><br>
+		<input type="number" id="inpVal"><br>
+		<button id="btn" onclick="Factorial()">Check Factorial</button>
+	</div>
+</body>
+<script>
+	let inpVal = document.getElementById('inpval')
+	let btn = document.getElementById('btn')
+
+	const Factorial = ()=>{
+		if(inpVal ===""){
+			alert("Sorry! No data inserted")
+			inpVal.focus()
+		}else{
+			let val = parseInt(inpVal.value)
+			let f=1;
+			for(let i ; i<val; i++){
+				f=f*i
+			}
+			alert(`Factorial of ${val} is ${f}`)
+		}
+	}
+</script>
+</html>

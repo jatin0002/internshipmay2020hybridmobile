@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="inp1" placeholder="Enter number" value="num1"/><br>
+    <input type="number" id="inp2" placeholder="Enter number" value="num2"/><br>
+    <button id="btn">Product</button>
+  </body>
+  <script>
+    let inp2 = document.getElementById("inp2");
+    let inp1 = document.getElementById("inp1");
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", () => {
+      if(inp1.value ==="" && inp2.value===""){
+			alert("Sorry! No data inserted")
+			inp1.focus()
+			inp2.focus()
+		}else{
+      val1= parseInt(inp1.value)
+      val2= parseInt(inp2.value)
+      alert(`Product of two number is ${val1*val2}`)
+    }
+      
+    });
+  </script>
+</html>

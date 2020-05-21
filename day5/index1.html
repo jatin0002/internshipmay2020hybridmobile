@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./jquery-3.5.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#save").click(function () {
+          var rollno = $("#name").val();
+          var name = $("#name").val();
+          var course = $("#course").val();
+
+          $.post(
+            "index1.php",
+            { rollno: rollno, name: name, course: course },
+            function (r, s) {
+              if (r == "done") {
+                $("#message").html("Record save");
+              } else {
+                $("#message").html("failed to save in db");
+              }
+            }
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    Roll Number <input type="text" id="rollno" /> <br />
+    Name <input type="text" id="name" /> <br />
+    Course <input type="text" id="course" /> <br />
+    <input type="button" id="save" value="save" />
+    <div id="message"></div>
+  </body>
+</html>

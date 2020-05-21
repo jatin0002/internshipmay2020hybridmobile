@@ -1,0 +1,21 @@
+<script src="./jquery-3.5.1.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#search").click(function () {
+      var rollno = $("#rollno").val();
+      $.post("searchStu.php", { rollno: rollno }, function (r, s) {
+       alert(r)
+        var s = r.split(",");
+
+        $("#name").val(s[0]);
+        $("#course").val(s[1]);
+      });
+    });
+  });
+</script>
+Roll Number <input type="text" id="rollno" /> <br />
+<input type="button" id="search" value="search" />
+
+Name <input type="text" id="name" /> <br />
+Course <input type="text" id="course" /> <br />
+<div id="result"></div>

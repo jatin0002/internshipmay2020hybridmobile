@@ -1,0 +1,14 @@
+<script src="./jquery-3.5.1.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#search").click(function () {
+      var rollno = $("#rollno").val();
+      $.post("index2.php", { rollno: rollno }, function (r, s) {
+        $("#result").html(r);
+      });
+    });
+  });
+</script>
+Roll Number <input type="text" id="rollno" /> <br />
+<input type="button" id="search" value="search" />
+<div id="result"></div>
